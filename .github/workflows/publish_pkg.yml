@@ -12,9 +12,9 @@ jobs:
       - name: Build container
         uses: docker/build-push-action@v1
         with:
-          username: RobbeTh-PXL
+          username: Sicatriz
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: robbeth-pxl/iot-opdracht-groep3/dockerpkg
+          repository: sicatriz/iot_opdracht_groep3/dockerpkg
           tag_with_sha: false
           tags: latest
