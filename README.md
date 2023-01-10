@@ -9,7 +9,8 @@ In summary, this IoT project demonstrates the capabilities of utilizing various 
 * Pynq-Z2 development board
 * Docker
 * Portainer
-* Azure SDK
+* Azure SDK=
+* Azure CLI
 * OpenRemote
 * Linux
 
