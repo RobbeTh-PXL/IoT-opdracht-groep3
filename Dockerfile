@@ -21,8 +21,7 @@ cd cmake \
 cmake .. \
 cmake --build .
 
-RUN cd \
-    make \
+RUN make \
     ./iothub_app
     
 # Build iothub_app.c
