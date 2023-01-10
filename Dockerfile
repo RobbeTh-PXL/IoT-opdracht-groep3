@@ -20,4 +20,10 @@ mkdir cmake \
 cd cmake \
 cmake .. \
 cmake --build .
+
+RUN cd
+    make \
+    ./iothub_app
+    
+# Build iothub_app.c
 #ENTRYPOINT ["./hello"]
