@@ -1,10 +1,23 @@
 FROM ubuntu:latest
 COPY . .
-RUN apt-get update && apt-get -y --no-install-recommends install \
-    build-essential \
-    clang \
+# Prerequisites Azure IOT SDK 
+RUN apt-get update && apt-get -y --no-install-recommends install \ 
+    git \
     cmake \
-    gdb \
-    wget
-RUN g++ main.cpp -o hello
-ENTRYPOINT ["./hello"]
+    build-essential \
+    curl \
+    libcurl4-openssl-dev \
+    libssl-dev uuid-dev \ 
+    ca-certificates
+# Fetch Azure IOT SDK    
+RUN git clone -b LTS_07_2022_Ref02 https://github.com/Azure/azure-iot-sdk-c.git \
+    cd azure-iot-sdk-c \ 
+    git submodule update --init
+    
+# Build IOT SDK
+RUN cd azure-iot-sdk-c \
+mkdir cmake \
+cd cmake \
+cmake .. \
+cmake --build .
+#ENTRYPOINT ["./hello"]
