@@ -2,6 +2,7 @@ FROM ubuntu:latest
 COPY . .
 # Prerequisites Azure IOT SDK 
 RUN apt-get update && apt-get -y --no-install-recommends install \ 
+    apt-utils \
     git \
     cmake \
     build-essential \
@@ -12,7 +13,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
 # Fetch Azure IOT SDK    
 RUN git clone -b LTS_07_2022_Ref02 https://github.com/Azure/azure-iot-sdk-c.git \
     cd azure-iot-sdk-c \ 
-    git submodule update --init
+    git submodule update --init --recursive
     
 # Build IOT SDK
 RUN cd azure-iot-sdk-c \
