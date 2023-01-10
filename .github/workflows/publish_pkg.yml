@@ -1,0 +1,20 @@
+name: Publish to Docker
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v2
+      # Add your test steps here if needed...
+      - name: Build container
+        uses: docker/build-push-action@v1
+        with:
+          username: RobbeTh-PXL
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: sicatriz/iot-opdracht-groep3/dockerpkg
+          tag_with_sha: false
+          tags: latest
