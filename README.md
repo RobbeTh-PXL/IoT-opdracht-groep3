@@ -2,8 +2,7 @@
 
 ## GOALS
 
-Door middel van Azure OpenRemote docker containers builden om updates uit te voeren. <br>
-Via Azure SDK een data stroom naar de cloud verzenden.<br>
+In summary, this IoT project demonstrates the capabilities of utilizing various technologies such as Docker, Portainer, Azure SDK, OpenRemote and PYNQ-Z2 development board to create a smart home system that is both powerful and user-friendly.<br>
 
 ## TOOLS
 
