@@ -11,8 +11,8 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates
 # Fetch Azure IOT SDK    
 RUN git clone -b LTS_07_2022_Ref02 https://github.com/Azure/azure-iot-sdk-c.git \
-    cd azure-iot-sdk-c \ 
-    git submodule update
+    cd azure-iot-sdk-c
+    #git submodule update
     
 # Build IOT SDK
 RUN cd azure-iot-sdk-c \
