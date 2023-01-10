@@ -10,6 +10,8 @@ In summary, this IoT project demonstrates the capabilities of utilizing various 
 * Docker
 * Portainer
 * Azure SDK
+* OpenRemote
+* Linux
 
 ## PROJECT DISCRIPTION
 
