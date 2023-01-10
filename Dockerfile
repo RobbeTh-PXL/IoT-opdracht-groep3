@@ -21,7 +21,7 @@ cd cmake \
 cmake .. \
 cmake --build .
 
-RUN cd ./azure-iot-sdk-c/cmake/iothub_client/samples/iothub_ll_telemetry_sample \
+RUN cd azure-iot-sdk-c/iothub_client/samples/iothub_ll_telemetry_sample \
     make
 ENTRYPOINT ["./iothub_ll_telemetry_sample"]
     
