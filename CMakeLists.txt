@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.5)
 cmake_policy(SET CMP0074 NEW)
 cmake_policy(SET CMP0012 NEW)
 
-project(iothub_ll_telemetry_sample)
+project(iothub_app)
 
 if(WIN32)
     message(FATAL_ERROR "This CMake file only supports Linux builds!")
@@ -18,12 +18,12 @@ add_definitions(-DSET_TRUSTED_CERT_IN_SAMPLES)
 include_directories("../../../../certs")
 
 set(iothub_c_files
-    ../iothub_ll_telemetry_sample.c
+    ../iothub_app.c
     ../../../../certs/certs.c
 )
 
-add_executable(iothub_ll_telemetry_sample ${iothub_c_files})
+add_executable(iothub_app ${iothub_c_files})
 
-target_link_libraries(iothub_ll_telemetry_sample
+target_link_libraries(iothub_app
     iothub_client
 )
