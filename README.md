@@ -25,3 +25,13 @@ Connectivity to the cloud will be achieved through the utilization of the Azure 
 The user interface for controlling and monitoring the smart home system will be developed using OpenRemote, an open-source platform that enables the creation of customized dashboards and automation of tasks based on sensor data and other inputs.
 
 In conclusion, this IoT project seeks to demonstrate the capabilities of utilizing various technologies such as Docker, Portainer, Azure SDK, OpenRemote and PYNQ-Z2 development board to create a smart home system that is both powerful and user-friendly. The project aims to highlight the potential of utilizing edge devices and cloud platforms in concert to achieve advanced functionality.
+
+## Prepare Target Device
+### Install Docker
+
+```
+sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+sudo echo "deb [arch=armhf] https://download.docker.com/linux/ubuntu bionic stable" > /etc/apt/sources.list.d/docker.list
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-get update
+```
